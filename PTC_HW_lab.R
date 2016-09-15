@@ -78,16 +78,16 @@ set.seed(101)
 A1 <- sample(c(0,1),50,replace=TRUE,prob=c(0.8,0.2))
 A2 <- sample(c(0,1),50, replace=TRUE,prob=c(0.5,0.5))
 dd <- data.frame(A1,A2)
-Achisq(dd)
-dd2 <- dd %>% ng
-Achisq(dd2)
-dd3 <- dd2 %>% ng
-Achisq(dd3)
-dd4 <- dd3 %>% ng
-Achisq(dd4)
-dd5 <- dd4 %>% ng
-Achisq(dd5)
+HWE_chisq(dd)
+dd2 <- dd %>% new_generation
+HWE_chisq(dd2)
+dd3 <- dd2 %>% new_generation
+HWE_chisq(dd3)
+dd4 <- dd3 %>% new_generation
+HWE_chisq(dd4)
+dd5 <- dd4 %>% new_generation
+HWE_chisq(dd5)
 
 
-dd <- dat(11,43,0)
-Achisq(dd)
+dd <- genotype_df(11,43,0)
+HWE_chisq(dd)
